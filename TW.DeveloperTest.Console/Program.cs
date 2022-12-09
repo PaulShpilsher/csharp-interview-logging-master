@@ -34,7 +34,6 @@ namespace TW.DeveloperTest.ConsoleApp
                 }
                 catch (Exception e)
                 {
-                    //TODO replace with logging library
                     logger.Error($"error - {e.Message}");
                 }
                 
