@@ -9,7 +9,7 @@ namespace TW.DeveloperTest.Logger
     public class LogEntry
     {
         public LogLevel Level { get; set; }
-        public DateTime Timetamp { get; set; }
+        public DateTime Timestamp { get; set; }
         public string Message { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace TW.DeveloperTest.Logger
             WriteLogEntry(new LogEntry
             {
                 Level = logLevel,
-                Timetamp = DateTime.Now,
+                Timestamp = DateTime.Now,
                 Message = message
             });
 
