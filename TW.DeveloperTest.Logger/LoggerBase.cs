@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TW.DeveloperTest.Logger
 {
-    public abstract class LoggerBase : ILogger
+    public abstract class LoggerBase : ILogger, ILoggerWriter
     {
         public void Error(string message)
         {
@@ -24,6 +24,17 @@ namespace TW.DeveloperTest.Logger
         }
 
 
-        public abstract void Log(LogLevel logLevel, string message);
+        public void Log(LogLevel logLevel, string message)
+        {
+            WriteLogEntry(new LogEntry
+            {
+                Level = logLevel,
+                Timetamp = DateTime.Now,
+                Message = message
+            });
+
+        }
+
+        public abstract void WriteLogEntry(LogEntry logEntry);
     }
 }
