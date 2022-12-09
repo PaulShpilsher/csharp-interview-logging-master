@@ -10,7 +10,7 @@ namespace TW.DeveloperTest.Logger
     {
         public override void WriteLogEntry(LogEntry logEntry)
         {
-            Console.WriteLine($"{logEntry.Timestamp} | {LogLevelToString(logEntry.Level)} || {logEntry.Message}");
+            Console.WriteLine($"{logEntry.Timestamp} | {LogLevelToString(logEntry.Level)} | {logEntry.Message}");
         }
 
         private static string LogLevelToString(LogLevel logLevel)
