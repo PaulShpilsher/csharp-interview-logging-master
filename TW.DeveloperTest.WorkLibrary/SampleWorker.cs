@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Text;
 using TW.DeveloperTest.Contracts;
+using TW.DeveloperTest.Logger;
 
 namespace TW.DeveloperTest.WorkLibrary
 {
     public class SampleWorker : IWorker
     {
         readonly Random _random;
+        readonly ILogger _logger;
 
-        public SampleWorker()
+        public SampleWorker(ILogger logger)
         {
             _random = new Random();
+            _logger = logger;
         }
 
         public string GetResult()
@@ -19,7 +22,7 @@ namespace TW.DeveloperTest.WorkLibrary
 
             if (result <= 95)
             {
-                //TODO Log to logging library successes
+                _logger.Info($"SampleWorker.GetResult success -> {result}");
                 return RandomString(result);
             }
 

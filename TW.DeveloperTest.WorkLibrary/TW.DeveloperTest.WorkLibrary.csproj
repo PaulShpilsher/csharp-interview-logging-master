@@ -52,6 +52,10 @@
       <Project>{d9a0edfb-b5d1-49f9-9f61-11f146c68f0a}</Project>
       <Name>TW.DeveloperTest.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TW.DeveloperTest.Logger\TW.DeveloperTest.Logger.csproj">
+      <Project>{EFA15EB3-80C9-4823-B1E4-B49E5256E362}</Project>
+      <Name>TW.DeveloperTest.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
