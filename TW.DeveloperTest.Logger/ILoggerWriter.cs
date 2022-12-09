@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TW.DeveloperTest.Logger
 {
-    public interface ILoggerWriter
+    internal interface ILoggerWriter
     {
         void WriteLogEntry(LogEntry logEntry);
     }
